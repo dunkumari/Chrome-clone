@@ -1,0 +1,142 @@
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-image-box {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  margin: 0 20px; 
+  opacity: 0.5;
+}
+
+.scroll-image-box.large {
+  flex: 0 0 40%; 
+}
+
+.scroll-image-box.small {
+  flex: 0 0 20%; 
+}
+
+.scroll-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.scroll-image-box:first-child {
+  margin-left: -10%;
+}
+
+.scroll-image-box:last-child {
+  margin-right: -10%;
+}
+
+/* Specific adjustments for images */
+.scroll-image-box:nth-child(1) .scroll-image,
+.scroll-image-box:nth-child(4) .scroll-image,
+.scroll-image-box:nth-child(5) .scroll-image {
+  width: 100%;
+  height: auto;
+  max-height: 700px; /* Increase height */
+}
+
+.scroll-image-box:nth-child(2) .scroll-image,
+.scroll-image-box:nth-child(3) .scroll-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px; 
+}
+
+
+/* for fast */
+.slider-box {
+  margin-left: 50px;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease, height 0.5s ease, width 0.5s ease;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 1000px; 
+  height: 550px; 
+  position: relative;
+}
+
+
+.card .card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%; 
+  z-index: 2;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+
+.card-media {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; 
+  transition: height 0.5s ease;
+  z-index: 1;
+}
+
+
+.card-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card:hover {
+  width: 1200px; 
+  height: 750px; 
+}
+
+.card:hover .card-media {
+  height: 100%;
+}
+
+.card:hover .card-content {
+  opacity: 0; 
+}
+
+/* Slider box margin */
+.slider-box {
+  margin-left: 50px;
+}
+
+
+.card-content .left {
+  flex: 1;
+  margin-right: 30px; 
+}
+
+.card-content .right {
+  flex: 1;
+  text-align: right;
+  margin-left: 40px; 
+}
+
